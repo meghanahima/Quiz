@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chemistry</title>
+    <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div><img src="icon.jpg" alt="icon" class="icon"></div>
+            <div class="mainHeading">Play and Learn</div>
+            <div class=navitem><a href="home.html">Home</a></div>
+            <div class=navitem><a href="Explore.html">Explore topics</a></div>
+       </nav>
+    </header>
+    <div class="whole">
+        <p>Q1. What is pH of neutral substance?</p>
+        <input type="radio" id="correct1">a)7<br>
+        <input type="radio">b)8<br>
+        <input type="radio">c)2<br>
+        <p>Q2.Which one of the following does atom not contain?</p>
+        <input type="radio">a)electron<br>
+        <input type="radio">b)proton<br>
+        <input type="radio" id="correct2">c)protein<br>
+        <p>Q3.In which bond are electrons transferred?</p>
+        <input type="radio">a)covalent<br>
+        <input type="radio" id="correct3">b)ionic<br>
+        <input type="radio">c)dative<br>
+        <input type="submit" onclick="getScore()" class="submitbtn">
+        <div id="msg"></div>
+    </div>
+    <script>
+        function getScore(){
+            let score=0;
+            if(document.getElementById("correct1").checked){
+                score++;
+            }
+            if(document.getElementById("correct2").checked){
+                score++;
+            }
+            if(document.getElementById("correct3").checked){
+                score++;
+            }
+            document.getElementById('msg').innerHTML="Your score is "+score+".\nKeep learning and Keep improving";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishQuiz</title>
+    <link rel="stylesheet" href="questions.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div><img src="icon.jpg" alt="icon" class="icon"></div>
+            <div class="mainHeading">Play and Learn</div>
+            <div class=navitem><a href="home.html">Home</a></div>
+            <div class=navitem><a href="Explore.html">Explore topics</a></div>
+       </nav>
+    </header>
+    <div class="whole">
+        <p>Q1. Where ____ you come from?</p>
+        <input type="radio" id="correct1">a)do<br>
+        <input type="radio">b)is<br>
+        <input type="radio">c)are<br>
+        <p>Q2.select the correct plural form of bottle</p>
+        <input type="radio">a)bottled<br>
+        <input type="radio">b)bottle<br>
+        <input type="radio" id="correct2">c)bottles<br>
+        <p>Q3.which parts of speech does 'an' belong to</p>
+        <input type="radio">a)noun<br>
+        <input type="radio" id="correct3">b)article<br>
+        <input type="radio">c)verb<br>
+        <input type="submit" onclick="getScore()" class="submitbtn">
+        <div id="msg"></div>
+    </div>
+    <script>
+        function getScore(){
+            let score=0;
+            if(document.getElementById("correct1").checked){
+                score++;
+            }
+            if(document.getElementById("correct2").checked){
+                score++;
+            }
+            if(document.getElementById("correct3").checked){
+                score++;
+            }
+            document.getElementById('msg').innerHTML="Your score is "+score+".\nKeep learning and Keep improving";
+        }
+    </script>
+</body>
+</html>
