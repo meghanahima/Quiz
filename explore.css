@@ -29,18 +29,25 @@ nav{
 .topic{
     display:flex;
     align-items:center;
-    height:520px;
-    width:80%;
-    justify-content: space-evenly;
+    height:90vh;
+    /* width:80%; */
+    justify-content:space-evenly;
 }
 .box{
-    size:25px;
+    /* font-size:25px; */
     border:2px solid grey;
     background-color:#0F70B7;
     color:rgb(245, 230, 230);
-    height:300px;
+    border-radius: 10px;
+    padding:10px 15px;
+    margin:10px 0px;
+    height:340px;
     width:270px;
-    justify-content:center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
 }
 .main{
     background-color:#28315C;
@@ -49,8 +56,13 @@ nav{
     font-weight:bold;
     font-size:30px;
 }
+.box div{
+    height:80%;
+}
 button{
     background-color:#B846C7;
+    /* position: absolute; */
+    /* margin-left:30%; */
     font-size:17px;
     height:30px;
     width:110px;
@@ -60,4 +72,31 @@ button{
     -moz-border-radius:6px;
     -ms-border-radius:6px;
     -o-border-radius:6px;
+}
+@media (max-width:840px){
+    .topic{
+        flex-direction: column;
+        /* padding:4% 2%; */
+        width:100%;
+        height:max-content;
+    }
+    .box{
+        height:max-content;
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* justify-items: center; */
+        align-items: center;
+    }
+    button{
+        margin-left:0%;
+
+    }
+    p{
+        margin:0;
+    }
+}
+body{
+    margin:0;
 }
